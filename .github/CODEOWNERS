@@ -1,0 +1,8 @@
+# Global code owners
+* @doughmination
+
+# Workflow files
+/.github/ @doughmination
+
+# Build and installer files  
+/src/ @doughmination

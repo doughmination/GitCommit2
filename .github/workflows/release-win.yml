@@ -1,0 +1,54 @@
+name: Release to Chocolatey
+
+on:
+  push:
+    tags:
+      - 'v*'
+    paths:
+      - 'src/win/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-publish-chocolatey:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      
+      - name: Get version from tag
+        id: get_version
+        shell: pwsh
+        run: |
+          $tag = $env:GITHUB_REF -replace 'refs/tags/v', ''
+          echo "VERSION=$tag" >> $env:GITHUB_OUTPUT
+          echo "Version: $tag"
+      
+      - name: Update version in nuspec
+        shell: pwsh
+        run: |
+          $version = "${{ steps.get_version.outputs.VERSION }}"
+          $nuspecPath = "src/win/gitcommit.nuspec"
+          (Get-Content $nuspecPath) -replace '<version>.*</version>', "<version>$version</version>" | Set-Content $nuspecPath
+      
+      - name: Build Chocolatey package
+        shell: pwsh
+        run: |
+          # Create tools directory
+          New-Item -ItemType Directory -Path "src/win/tools" -Force | Out-Null
+          Copy-Item "src/win/GitCommit.ps1" -Destination "src/win/tools/"
+          Copy-Item "src/win/GitCommit.bat" -Destination "src/win/tools/"
+          
+          cd src/win
+          choco pack gitcommit.nuspec
+      
+      - name: Publish to Chocolatey
+        shell: pwsh
+        env:
+          CHOCO_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
+        run: |
+          $version = "${{ steps.get_version.outputs.VERSION }}"
+          cd src/win
+          choco push "gitcommit.$version.nupkg" --source https://push.chocolatey.org/ --api-key="$env:CHOCO_API_KEY"
+      
+      - name: Notify success
+        if: success()
+        run: echo "Successfully published GitCommit v${{ steps.get_version.outputs.VERSION }} to Chocolatey!"

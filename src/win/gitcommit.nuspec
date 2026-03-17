@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <iconUrl>https://raw.githubusercontent.com/doughmination/GitCommit/refs/heads/main/assets/icon.png</iconUrl>
+    <id>gitcommit</id>
+    <version>1.1.0</version>
+    <packageSourceUrl>https://github.com/doughmination/GitCommit</packageSourceUrl>
+    <owners>doughmination</owners>
+    <title>GitCommit</title>
+    <authors>doughmination</authors>
+    <projectUrl>https://github.com/doughmination/GitCommit</projectUrl>
+    <copyright>2025 Clove Twilight</copyright>
+    <licenseUrl>https://github.com/doughmination/GitCommit/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>git automation workflow powershell</tags>
+    <summary>Automated Git workflow tool for streamlined commits and pushes</summary>
+    <description>
+GitCommit is an automated Git workflow tool that simplifies the process of committing and pushing changes to your Git repositories. It handles the entire workflow: switching to main branch, pulling latest changes, adding files, committing with your message, and pushing to origin.
+
+Features:
+- Automated Git workflow (checkout, pull, add, commit, push)
+- Interactive commit message prompts
+- Error handling and validation
+- Works with any Git repository
+- Simple command-line interface
+
+Usage: Simply run 'GitCommit' from any Git repository directory.
+    </description>
+    <releaseNotes>Initial release of GitCommit automation tool.</releaseNotes>
+    <dependencies>
+      <dependency id="git" version="2.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

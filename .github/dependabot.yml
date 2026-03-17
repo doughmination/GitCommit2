@@ -1,0 +1,35 @@
+version: 2
+updates:
+  # Monitor GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    reviewers:
+      - "doughmination"
+    assignees:
+      - "doughmination"
+    labels:
+      - "updates"
+      - "dependencies"
+    
+  # Monitor PowerShell Gallery modules
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "daily" 
+      time: "10:00"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    reviewers:
+      - "doughmination"
+    assignees:
+      - "doughmination"
+    labels:
+      - "updates"
+      - "dependencies"
