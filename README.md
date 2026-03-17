@@ -1,22 +1,22 @@
 # GitCommit
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/doughmination/GitCommit/refs/heads/main/assets/icon.png" alt="GitCommit Logo" width="128" height="128">
+<img src="https://raw.githubusercontent.com/doughmination/GitCommit2/refs/heads/main/assets/icon.png" alt="GitCommit Logo" width="128" height="128">
 </div>
 
 <div align="center">
 <img src="https://custom-icon-badges.demolab.com/badge/PowerShell-5391FE?logo=powershell-white&logoColor=fff">
 <img src="https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=fff">
 <div>
-<img src="https://www.codefactor.io/repository/github/doughmination/gitcommit/badge">
+<img src="https://www.codefactor.io/repository/github/doughmination/gitcommit2/badge">
 <img src="https://img.shields.io/chocolatey/v/gitcommit">
 <img src="https://img.shields.io/aur/version/gitcommit?logo=archlinux">
 <img src="https://img.shields.io/badge/PPA-v1.1.2-orange?logo=launchpad">
 <div>
-<img src="https://github.com/doughmination/GitCommit/actions/workflows/ci.yml/badge.svg">
-<img src="https://github.com/doughmination/GitCommit/actions/workflows/release-win.yml/badge.svg">
-<img src="https://github.com/doughmination/GitCommit/actions/workflows/release-apt.yml/badge.svg">
-<img src="https://github.com/doughmination/GitCommit/actions/workflows/release-aur.yml/badge.svg">
+<img src="https://github.com/doughmination/GitCommit2/actions/workflows/ci.yml/badge.svg">
+<img src="https://github.com/doughmination/GitCommit2/actions/workflows/release-win.yml/badge.svg">
+<img src="https://github.com/doughmination/GitCommit2/actions/workflows/release-apt.yml/badge.svg">
+<img src="https://github.com/doughmination/GitCommit2/actions/workflows/release-aur.yml/badge.svg">
 </div>
 
 ## Why does this exist?
