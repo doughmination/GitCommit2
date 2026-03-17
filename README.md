@@ -8,7 +8,6 @@
 <img src="https://custom-icon-badges.demolab.com/badge/PowerShell-5391FE?logo=powershell-white&logoColor=fff">
 <img src="https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=fff">
 <div>
-<img src="https://www.codefactor.io/repository/github/doughmination/gitcommit2/badge">
 <img src="https://img.shields.io/chocolatey/v/gitcommit">
 <img src="https://img.shields.io/aur/version/gitcommit?logo=archlinux">
 <img src="https://img.shields.io/badge/PPA-v1.1.2-orange?logo=launchpad">
